@@ -4,7 +4,7 @@ default: go
 extends: [golang, changelog]
 
 properties:
-  NAME:    'cartes-sawo'
+  NAME:    'sawo-cards'
   LIBRARIES:
   - 'github.com/gin-gonic/gin'
 
