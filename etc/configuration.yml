@@ -1,0 +1,12 @@
+# Fichier de configuration
+
+# le port sur lequel tourne le serveur
+port: 8000
+
+# la liste des utilisateurs. Un utilisateur est associé à sa
+# clef d'API et est constitué d'un nom et d'une adresse email
+users:
+
+  TEST:
+    name:  Test
+    email: test@example.com
