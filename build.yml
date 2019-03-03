@@ -20,12 +20,7 @@ targets:
     - chdir: =BUILD_DIR
     - $: ['./={NAME}', '../etc/configuration.yml']
 
-  token:
-    doc: Generate a token
-    steps:
-    - $: ['go', 'run', 'etc/token.go']
-
-  archive:
+  installer:
     doc: Generate installation archive
     depends: [clean, bin]
     steps:
@@ -40,9 +35,31 @@ targets:
       prefix: =NAME
       tofile: '={BUILD_DIR}/={NAME}.tar.gz'
 
+  archive:
+    doc: Generate installation archive
+    depends: clean
+    steps:
+    - mkdir: =BUILD_DIR
+    - copy:  '*.png'
+      dir:   'img'
+      todir: =BUILD_DIR
+    - copy:  'planches.sh'
+      dir:   'etc'
+      todir: =BUILD_DIR
+    - $: ['md2pdf', '-o', '={BUILD_DIR}/sawo-cards.pdf', 'README.md']
+    - tar:    ['*.png', '*.sh', '*.pdf']
+      dir:    =BUILD_DIR
+      prefix: =NAME
+      tofile: '={BUILD_DIR}/={NAME}.zip'
+
   client:
     doc: Call web service
     steps:
     - mkdir: =BUILD_DIR
     - chdir: =BUILD_DIR
     - $:  ['curl', '-o', 'planche.png', 'http://localhost:8000/TEST/extras/extras/extras/extras/extras/extras/extras/extras']
+
+  token:
+    doc: Generate a token
+    steps:
+    - $: ['go', 'run', 'etc/token.go']
