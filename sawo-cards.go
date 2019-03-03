@@ -29,6 +29,14 @@ var configuration Configuration
 // logger est le logger
 var logger = log.New(os.Stdout, "", log.Ldate+log.Ltime)
 
+// Index est un channel pour distribuer les index des images
+var Index = make(chan int, 1)
+
+// init lance la goroutine de l'index
+func init() {
+	go Indexer()
+}
+
 // Error affiche un message d'erreur et quitte en erreur
 func Error(message string) {
 	println(message)
@@ -54,6 +62,15 @@ func LoadConfiguration() {
 	yaml.UnmarshalStrict(source, &configuration)
 }
 
+// Indexer est appelé dans une goroutine pour générer les indexs des publications
+func Indexer() {
+	i := 1
+	for {
+		Index <- i
+		i++
+	}
+}
+
 // CheckCredentials looks for token un configuration.Users map
 // Return authenticated user or error if access is not granted
 func CheckCredentials(token string) (*User, error) {
@@ -72,6 +89,7 @@ func SetupRouter() *gin.Engine {
 	router.GET("/:token/:img1/:img2/:img3/:img4/:img5/:img6/:img7/:img8", Planche4x2)
 	router.GET("/:token/:img1/:img2/:img3/:img4", Planche2x2)
 	router.GET("/:token/:img1/:img2", Planche2x1)
+	router.GET("/:token", Planche)
 	return router
 }
 
