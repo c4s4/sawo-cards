@@ -47,7 +47,7 @@ targets:
       dir:   'etc'
       todir: =BUILD_DIR
     - $: ['md2pdf', '-o', '={BUILD_DIR}/sawo-cards.pdf', 'README.md']
-    - tar:    ['*.png', '*.sh', '*.pdf']
+    - zip:    ['*.png', '*.sh', '*.pdf']
       dir:    =BUILD_DIR
       prefix: =NAME
       tofile: '={BUILD_DIR}/={NAME}.zip'
