@@ -11,8 +11,8 @@ User=sawo
 Group=sawo
 UMask=007
  
-ExecStart=/home/sawo/sawo-cards /home/sawo/configuration.yml
 WorkingDirectory=/home/sawo
+ExecStart=/home/sawo/sawo-cards /home/sawo/configuration.yml
  
 Restart=on-failure
  
