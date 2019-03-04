@@ -3,21 +3,21 @@
 [Unit]
 Description=SawoCards
 After=network-online.target
- 
+
 [Service]
 Type=simple
- 
+
 User=sawo
 Group=sawo
 UMask=007
- 
+
 WorkingDirectory=/home/sawo
 ExecStart=/home/sawo/sawo-cards /home/sawo/configuration.yml
- 
+
 Restart=on-failure
- 
+
 # Configures the time to wait before service is stopped forcefully.
 TimeoutStopSec=300
- 
+
 [Install]
 WantedBy=multi-user.target
