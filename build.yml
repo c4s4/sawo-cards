@@ -10,6 +10,17 @@ properties:
 
 targets:
 
+  deploy:
+    doc: Deploy binary on server
+    depends: [clean, bin]
+    steps:
+    - print: 'Stopping service...'
+    - $: ['ssh', 'root@elrond', 'systemctl stop sawo-cards']
+    - print: 'Installing service...'
+    - $: ['scp', '={BUILD_DIR}/={NAME}', 'sawo@elrond:~/']
+    - print: 'Starting service...'
+    - $: ['ssh', 'root@elrond', 'systemctl start sawo-cards']
+
   go:
     doc: Build and run web service
     depends: [clean, bin]
