@@ -4,11 +4,15 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"regexp"
 	"sort"
 	"strings"
 
 	"github.com/gin-gonic/gin"
 )
+
+// RegexpImage is the regexp for image names
+var RegexpImage = regexp.MustCompile(`^\w+$`)
 
 // BuildImage run command to build the image
 func BuildImage(images []string, ctx *gin.Context) {
@@ -21,8 +25,14 @@ func BuildImage(images []string, ctx *gin.Context) {
 	} else if len(images) == 2 {
 		size = "2x1"
 	} else {
-		ctx.AbortWithError(400, fmt.Errorf("Bad image size"))
+		ctx.Data(http.StatusOK, "text/html", []byte("Bad image size"))
 		return
+	}
+	for i := 0; i < len(images); i++ {
+		if !RegexpImage.MatchString(images[i]) {
+			ctx.Data(http.StatusOK, "text/html", []byte("Bad image name"))
+			return
+		}
 	}
 	for i := 0; i < len(images); i++ {
 		images[i] = images[i] + ".png"
@@ -35,12 +45,12 @@ func BuildImage(images []string, ctx *gin.Context) {
 	arguments = append(arguments, image)
 	output, err := RunCommand(command, arguments)
 	if err != nil {
-		ctx.AbortWithStatusJSON(400, output)
+		ctx.Data(http.StatusOK, "text/html", []byte(output))
 		return
 	}
 	data, err := ioutil.ReadFile(image)
 	if err != nil {
-		ctx.AbortWithError(400, err)
+		ctx.Data(http.StatusOK, "text/html", []byte(err.Error()))
 		return
 	}
 	ctx.Data(http.StatusOK, "image/png", data)
@@ -51,7 +61,7 @@ func Planche4x2(ctx *gin.Context) {
 	token := ctx.Param("token")
 	user, err := CheckCredentials(token)
 	if err != nil {
-		ctx.AbortWithError(401, err)
+		ctx.Data(http.StatusOK, "text/html", []byte("Accès non permis"))
 		return
 	}
 	images := []string{ctx.Param("img1"), ctx.Param("img2"), ctx.Param("img3"), ctx.Param("img4"),
@@ -65,7 +75,7 @@ func Planche2x2(ctx *gin.Context) {
 	token := ctx.Param("token")
 	user, err := CheckCredentials(token)
 	if err != nil {
-		ctx.AbortWithError(401, err)
+		ctx.Data(http.StatusOK, "text/html", []byte(err.Error()))
 		return
 	}
 	images := []string{ctx.Param("img1"), ctx.Param("img2"), ctx.Param("img3"), ctx.Param("img4")}
@@ -78,7 +88,7 @@ func Planche2x1(ctx *gin.Context) {
 	token := ctx.Param("token")
 	user, err := CheckCredentials(token)
 	if err != nil {
-		ctx.AbortWithError(401, err)
+		ctx.Data(200, "text/html", []byte(err.Error()))
 		return
 	}
 	images := []string{ctx.Param("img1"), ctx.Param("img2")}
@@ -91,7 +101,7 @@ func Planche(ctx *gin.Context) {
 	token := ctx.Param("token")
 	user, err := CheckCredentials(token)
 	if err != nil {
-		ctx.AbortWithError(401, err)
+		ctx.Data(401, "text/html", []byte(err.Error()))
 		return
 	}
 	logger.Printf("Planche pour %s", user.Name)
@@ -99,7 +109,7 @@ func Planche(ctx *gin.Context) {
 	var images []string
 	files, err := ioutil.ReadDir("./")
 	if err != nil {
-		ctx.AbortWithError(500, err)
+		ctx.Data(http.StatusOK, "text/html", []byte(err.Error()))
 		return
 	}
 	for _, file := range files {
@@ -117,12 +127,12 @@ func Planche(ctx *gin.Context) {
 	arguments = append(arguments, image)
 	output, err := RunCommand(command, arguments)
 	if err != nil {
-		ctx.AbortWithError(400, fmt.Errorf(output))
+		ctx.Data(http.StatusOK, "text/html", []byte(output))
 		return
 	}
 	data, err := ioutil.ReadFile(image)
 	if err != nil {
-		ctx.AbortWithError(400, err)
+		ctx.Data(http.StatusOK, "text/html", []byte(err.Error()))
 		return
 	}
 	ctx.Data(http.StatusOK, "image/png", data)
