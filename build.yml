@@ -51,13 +51,13 @@ targets:
   doc:
     doc: Build documentation
     steps:
+    - mkdir: =BUILD_DIR
     - $: ['md2pdf', '-o', '={BUILD_DIR}/sawo-cards.pdf', 'README.md']
 
   archive:
     doc: Generate installation archive
     depends: [clean, doc]
     steps:
-    - mkdir: =BUILD_DIR
     - copy:  '*.png'
       dir:   'img'
       todir: =BUILD_DIR
