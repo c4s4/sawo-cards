@@ -10,20 +10,13 @@ properties:
 
 targets:
 
-  deploy:
-    doc: Deploy binary on server
-    depends: [clean, bin]
+  doc:
+    doc: Build documentation
     steps:
-    - print: 'Stopping service...'
-    - $: ['ssh', 'root@elrond', 'systemctl stop sawo-cards']
-    - print: 'Installing service...'
-    - $: ['scp', '={BUILD_DIR}/={NAME}', 'sawo@elrond:~/']
-    - print: 'Copying images...'
-    - $: 'scp img/*.png sawo@elrond:~/'
-    - print: 'Starting service...'
-    - $: ['ssh', 'root@elrond', 'systemctl start sawo-cards']
+    - mkdir: =BUILD_DIR
+    - $: ['md2pdf', '-o', '={BUILD_DIR}/sawo-cards.pdf', 'README.md']
 
-  go:
+  run:
     doc: Build and run web service
     depends: [clean, bin]
     steps:
@@ -33,44 +26,42 @@ targets:
     - chdir: =BUILD_DIR
     - $: ['./={NAME}', '../etc/configuration.yml']
 
-  installer:
-    doc: Generate installation archive
+  client:
+    doc: Call web service
+    steps:
+    - mkdir: =BUILD_DIR
+    - chdir: =BUILD_DIR
+    - $:  ['curl', '-o', 'planche.png', 'http://sweetohm.net/sawo/TEST/perso/pnj/joker/extras/background/intrigue/lieu/tresor']
+
+  deploy:
+    doc: Deploy binary on server
     depends: [clean, bin]
     steps:
-    - copy:  '*.png'
-      dir:   'img'
-      todir: =BUILD_DIR
-    - copy:  'configuration.yml'
-      dir:   'etc'
-      todir: =BUILD_DIR
-    - tar:    ['*.png', '*.yml', =NAME]
-      dir:    =BUILD_DIR
-      prefix: =NAME
-      tofile: '={BUILD_DIR}/={NAME}.tar.gz'
+    - print: 'Stopping service...'
+    - $: ['ssh', 'root@elrond', 'systemctl stop sawo-cards']
+    - print: 'Installing service...'
+    - $: ['scp', '={BUILD_DIR}/={NAME}', 'sawo@elrond:~/']
+    - print: 'Copying configuration...'
+    - $: ['scp', 'etc/configuration.yml', 'sawo@elrond:~/']
+    - print: 'Copying images...'
+    - $: 'scp img/*.png sawo@elrond:~/'
+    - print: 'Starting service...'
+    - $: ['ssh', 'root@elrond', 'systemctl start sawo-cards']
 
   archive:
     doc: Generate installation archive
-    depends: clean
+    depends: [clean, doc]
     steps:
-    - mkdir: =BUILD_DIR
     - copy:  '*.png'
       dir:   'img'
       todir: =BUILD_DIR
     - copy:  'planches.sh'
       dir:   'etc'
       todir: =BUILD_DIR
-    - $: ['md2pdf', '-o', '={BUILD_DIR}/sawo-cards.pdf', 'README.md']
     - zip:    ['*.png', '*.sh', '*.pdf']
       dir:    =BUILD_DIR
       prefix: =NAME
       tofile: '={BUILD_DIR}/={NAME}.zip'
-
-  client:
-    doc: Call web service
-    steps:
-    - mkdir: =BUILD_DIR
-    - chdir: =BUILD_DIR
-    - $:  ['curl', '-o', 'planche.png', 'http://localhost:8000/TEST/extras/extras/extras/extras/extras/extras/extras/extras']
 
   token:
     doc: Generate a token

@@ -1,5 +1,9 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.0.2
+  date:    2019-03-09
+  summary: Mise à jour de la documentation
+
 - version: 1.0.1
   date:    2019-03-04
   summary: Mise à jour des cartes

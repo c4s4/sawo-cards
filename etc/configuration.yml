@@ -1,7 +1,8 @@
-# Fichier de configuration
+# /home/sawo/configuration.yml
+# Fichier de configuration sawo-cards
 
 # le port sur lequel tourne le serveur
-port: 8000
+port: 8282
 
 # la liste des utilisateurs. Un utilisateur est associé à sa
 # clef d'API et est constitué d'un nom et d'une adresse email
