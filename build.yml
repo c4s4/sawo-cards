@@ -41,8 +41,6 @@ targets:
     - $: ['ssh', 'root@elrond', 'systemctl stop sawo-cards']
     - print: 'Installing service...'
     - $: ['scp', '={BUILD_DIR}/={NAME}', 'sawo@elrond:~/']
-    - print: 'Copying configuration...'
-    - $: ['scp', 'etc/configuration.yml', 'sawo@elrond:~/']
     - print: 'Copying images...'
     - $: 'scp img/*.png sawo@elrond:~/'
     - print: 'Starting service...'
