@@ -31,7 +31,7 @@ targets:
     steps:
     - mkdir: =BUILD_DIR
     - chdir: =BUILD_DIR
-    - $:  ['curl', '-o', 'planche.png', 'http://sweetohm.net:8282/TEST/perso/pnj/joker/extras/background/intrigue/lieu/tresor']
+    - $:  ['curl', '-o', 'planche.png', 'http://sweetohm.net/sawo/TEST/perso/pnj/joker/extras/background/intrigue/lieu/tresor']
 
   deploy:
     doc: Deploy binary on server

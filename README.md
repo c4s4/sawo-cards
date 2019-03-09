@@ -20,13 +20,13 @@ Pour faciliter la réalisation de ses propres planches, j'ai conçu un service w
 
 Pour voir les images des cartes disponibles, on pourra ouvrir dans son navigateur l'URL (où l'on remplacera *CLEF* par la clef reçue par mail) :
 
-- <http://sweetohm.net:8000/CLEF>
+- <http://sweetohm.net/sawo/CLEF>
 
 ![](cartes.png)
 
 Sous chaque carte est indiquée son nom. Pour générer un planche *2 x 2* avec les cartes *perso*, *background*, *pnj* et *background*, on appellera l'URL :
 
-- <http://sweetohm.net:8000/CLEF/perso/background/pnj/background>
+- <http://sweetohm.net/sawo/CLEF/perso/background/pnj/background>
 
 ![](planche-2x2.png)
 
@@ -34,7 +34,7 @@ Il est possible de générer des planches *2 x 1*, *2 x 2* et *4 x 2*. On enverr
 
 Autre exemple, pour faire une planche *4x2* avec les cartes principales, on appellera :
 
-- <http://sweetohm.net:8000/CLEF/perso/pnj/joker/extras/background/intrigue/lieu/tresor>
+- <http://sweetohm.net/sawo/CLEF/perso/pnj/joker/extras/background/intrigue/lieu/tresor>
 
 ![](planche-4x2.png)
 
