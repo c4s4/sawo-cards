@@ -42,4 +42,12 @@ Il est aussi possible de remplir les cartes avant de les imprimer. C'est ce que 
 
 Je trouve que ces cartes sont le meilleur moyen de mener une partie : on n'est pas perdu dans les pages du scénario, on peut étaler les fiches des personnages devant soi, on peut donner aux joueurs des cartes avec des indices ou des trésors, etc. J'imprime les feuilles de perso en format *A5* pour les joueurs et au format *A7* pour le moi.
 
+Un court scénario tient sur une dizaine de cartes :
+
+![](scenario.png)
+
+Pour une campagne (telle que *Irongate* dans le cas de la photo), c'est bien plus conséquent en terme de cartes :o)
+
+![](campagne.png)
+
 *Enjoy!*
