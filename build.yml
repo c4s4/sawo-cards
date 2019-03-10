@@ -72,7 +72,8 @@ targets:
       tofile: '../sweetohm/content/article/sawo-cards.md'
     - copy:  'sawo-cards-*.png'
       todir: '../sweetohm/content/article/'
-    - copy:  '={BUILD_DIR}/={NAME}.zip'
+    - copy:  '={NAME}.zip'
+      dir:   =BUILD_DIR
       todir: '../sweetohm/static/arc'
 
   token:
