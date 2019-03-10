@@ -1,5 +1,9 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.0.4
+  date:    2019-03-10
+  summary: Corrections diverses et publication sur sweetohm
+
 - version: 1.0.3
   date:    2019-03-09
   summary: Ajout de photos dans la documentation
