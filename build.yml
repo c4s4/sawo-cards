@@ -42,7 +42,7 @@ targets:
     - print: 'Installing service...'
     - $: ['scp', '={BUILD_DIR}/={NAME}', 'sawo@elrond:~/']
     - print: 'Copying images...'
-    - $: 'scp img/*.png sawo@elrond:~/'
+    - $: 'scp cards/*.png sawo@elrond:~/'
     - print: 'Starting service...'
     - $: ['ssh', 'root@elrond', 'systemctl start sawo-cards']
 
@@ -51,7 +51,7 @@ targets:
     depends: [clean, doc]
     steps:
     - copy:  '*.png'
-      dir:   'img'
+      dir:   'cards'
       todir: =BUILD_DIR
     - copy:  'planches.sh'
       dir:   'etc'
@@ -60,6 +60,21 @@ targets:
       dir:    =BUILD_DIR
       prefix: =NAME
       tofile: '={BUILD_DIR}/={NAME}.zip'
+
+  publish:
+    doc: Publish documentation on sweetohm
+    depends: archive
+    steps:
+    - chdir: '../sweetohm'
+    - $: ['git', 'pull']
+    - chdir: =_BASE
+    - copy:   README.md
+      tofile: '../sweetohm/content/article/sawo-cards.md'
+    - copy:  'sawo-cards-*.png'
+      todir: '../sweetohm/content/article/'
+    - copy:  '={NAME}.zip'
+      dir:   =BUILD_DIR
+      todir: '../sweetohm/static/arc'
 
   token:
     doc: Generate a token
