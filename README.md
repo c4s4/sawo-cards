@@ -1,6 +1,17 @@
-# Planches de Cartes Savage Worlds
+---
+title:      Planches de Cartes Savage Worlds
+author:     Michel Casabianca
+email:      michel.casabianca@gmail.com
+id:         sawo-cards
+date:       2019-03-10
+categories: [jeux, sawo]
+lang:       fr
+toc:        
+---
 
 Ayant lu avec beaucoup d'intérêt le livre [Lazy Dungeon Master](http://slyflourish.com/lazydm/), j'ai décidé de mettre en pratique ses recommandations avec [Savage Worlds](https://www.black-book-editions.fr/catalogue.php?id=58).
+
+<!--more-->
 
 Pour résumer, *Lazy Dungeon Master* recommande de préparer ses parties en écrivant des fiches pour les personnages et adversaires, les lieux, les intrigues et les trésors. Il suggère des fiches bristol de couleurs différentes pour les différents types (par exemple bleues pour les lieux, jaunes pour les trésors, vertes pour les intrigues, etc).
 
@@ -8,7 +19,7 @@ Pour résumer, *Lazy Dungeon Master* recommande de préparer ses parties en écr
 
 Je me suis dit qu'il serait bien de faire des mini fiches de personnage pour les PNJs, Extras et Jokers. J'ai donc conçu ces différentes fiches pour préparer mes parties. Voici par exemple une carte pour un *Joker* :
 
-![](img/sawo-cards-joker.png)
+![](sawo-cards-joker.png)
 
 Par la suite, je me suis dit que ce serait une bonne idée de préparer d'autres fiches spécifiques pour les intrigues, lieux et trésors. Et puis j'ai fait d'autres fiches plus spécifiques à Savage Worlds, comme celle pour les pouvoirs.
 
@@ -24,7 +35,7 @@ Pour voir les images des cartes disponibles, on pourra ouvrir dans son navigateu
 
 - <http://sweetohm.net/sawo/cards/CLEF>
 
-![](img/sawo-cards-cartes.png)
+![](sawo-cards-cartes.png)
 
 Sous chaque carte est indiqué son nom. Pour générer une planche, appeler l'URL *http://sweetohm.net/sawo/cards/CLEF/* suivie des noms des cartes séparées de slashs.
 
@@ -34,7 +45,7 @@ Par exemple, pour générer une fiche de personnage et de PNJ accompagnées de l
 
 Ce qui donnera la planche suivante :
 
-![](img/sawo-cards-planche-2x2.png)
+![](sawo-cards-planche-2x2.png)
 
 Il est possible de générer des planches *2 x 1*, *2 x 2* et *4 x 2*. On enverra alors sur l'URL *2*, *4* ou *8* noms de cartes. Pour récupérer la planches, faire un clic droit sur l'image et sélectionner dans le menu *Enregistrer l'image sous...*.
 
@@ -44,7 +55,7 @@ Pour faire une planche *4x2* avec les principales cartes, on appellera :
 
 Ce qui donne la planche :
 
-![](img/sawo-cards-planche-4x2.png)
+![](sawo-cards-planche-4x2.png)
 
 En pratique, les cartes les plus utilisées sont *intrigue*, *PNJ*, *Extras*, *Joker*, *lieu* et *tresor*. On prendra soin de les imprimer dans les bonnes proportions sur du bristol pour préparer ses parties.
 
@@ -65,11 +76,11 @@ Pour les joueurs, J'imprime les fiches de personnage au format A5, avec les bloq
 
 Un court scénario tient sur une dizaine de cartes :
 
-![](img/sawo-cards-scenario.png)
+![](sawo-cards-scenario.png)
 
 Pour une campagne, telle que *Irongate* dans le cas de la photo, c'est bien plus conséquent et on arrive vite à des piles de cartes.
 
-![](img/sawo-cards-campagne.png)
+![](sawo-cards-campagne.png)
 
 Si vous avez des suggestions pour améliorer ces cartes ou en créer de nouvelles, n'hésitez pas à m'envoyer un message à <mailto:michel.casabianca@gmail.com>.
 
