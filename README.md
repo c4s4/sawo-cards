@@ -13,7 +13,7 @@ Ayant lu avec beaucoup d'intérêt le livre [Lazy Dungeon Master](http://slyflou
 
 <!--more-->
 
-Pour résumer, *Lazy Dungeon Master* recommande de préparer ses parties en écrivant des fiches pour les personnages et adversaires, les lieux, les intrigues et les trésors. Il suggère des fiches bristol de couleurs différentes pour les différents types (par exemple bleues pour les lieux, jaunes pour les trésors, vertes pour les intrigues, etc).
+Pour résumer, *Lazy Dungeon Master* recommande de préparer ses parties en écrivant des fiches pour les personnages et adversaires, les lieux, les intrigues et les trésors. Il suggère des fiches bristol de couleurs différentes selon le type (par exemple bleues pour les lieux, jaunes pour les trésors, vertes pour les intrigues, etc).
 
 ## Cartes Savage Worlds
 
@@ -21,7 +21,7 @@ Je me suis dit qu'il serait bien de faire des mini fiches de personnage pour les
 
 ![](sawo-cards-joker.png)
 
-Par la suite, je me suis dit que ce serait une bonne idée de préparer d'autres fiches spécifiques pour les intrigues, lieux et trésors. Et puis j'ai fait d'autres fiches plus spécifiques à Savage Worlds, comme celle pour les pouvoirs.
+Par la suite, je me suis dit que ce serait une bonne idée de préparer d'autres fiches spécifiques pour les intrigues, lieux et trésors. Et puis j'ai fait d'autres plus spécifiques à Savage Worlds, comme celle pour les pouvoirs.
 
 Ayant de bons yeux, j'ai préféré les imprimer au format *A7*, soit à peu près la taille des cartes à jouer, ce qui permet d'en mettre *8* sur une page au format *A4*. On peut aussi les imprimer en *A6* , on en met alors *4*, ou en *A5*, on passe alors à *2* par page.
 
@@ -37,9 +37,9 @@ Pour voir les images des cartes disponibles, on pourra ouvrir dans son navigateu
 
 ![](sawo-cards-cartes.png)
 
-Sous chaque carte est indiqué son nom. Pour générer une planche, appeler l'URL *http://sweetohm.net/sawo/cards/CLEF/* suivie des noms des cartes séparées de slashs.
+Sous chaque carte est indiqué son nom. Pour générer une planche, appeler l'URL *http://sweetohm.net/sawo/cards/CLEF/* suivie des noms des cartes séparés par des slashs.
 
-Par exemple, pour générer une fiche de personnage et de PNJ accompagnées de leur background au format *A5*, on ajoutera sur l'URL *perso*, *background*, *pnj* et *background* :
+Par exemple, pour générer des fiches de personnage et de PNJ accompagnées de leur background au format *A5*, on ajoutera sur l'URL *perso*, *background*, *pnj* et *background* :
 
 - <http://sweetohm.net/sawo/cards/CLEF/perso/background/pnj/background>
 
@@ -72,7 +72,7 @@ J'expérimente l'usage de ces cartes depuis quelques parties et elles s'avèrent
 
 Je remplis les cartes avec mon Galaxy Note puis je les imprime par planches de 8 que je compose avec un script qui appelle ImageMagick en ligne de commande. Je les numérote ensuite après impression pour ne jamais perdre le fil de mes fiches en cours de partie.
 
-Pour les joueurs, J'imprime les fiches de personnage au format A5, avec les bloques de statistiques et une image ou le background. Pour le maître de jeu, je les imprime au format A6.
+Pour les joueurs, J'imprime les fiches de personnage au format A5, avec les blocs de statistiques et une image ou le background. Pour le maître de jeu, je les imprime au format A6.
 
 Un court scénario tient sur une dizaine de cartes :
 
