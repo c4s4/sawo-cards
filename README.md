@@ -8,7 +8,7 @@ Pour résumer, *Lazy Dungeon Master* recommande de préparer ses parties en écr
 
 Je me suis dit qu'il serait bien de faire des mini fiches de personnage pour les PNJs, Extras et Jokers. J'ai donc conçus ces différentes fiches pour préparer mes parties. Voici par exemple une carte pour un *Joker* :
 
-![](nemo.png)
+![](img/sawo-cards-joker.png)
 
 Par la suite, je me suis dit que ce serait une bonne idée de préparer d'autres fiches spécifiques pour les intrigues, lieux et trésors. Et puis j'ai fait d'autres fiches plus spécifiques à Savage Worlds, comme celle pour les pouvoirs.
 
@@ -24,7 +24,7 @@ Pour voir les images des cartes disponibles, on pourra ouvrir dans son navigateu
 
 - <http://sweetohm.net/sawo/cards/CLEF>
 
-![](cartes.png)
+![](img/sawo-cards-cartes.png)
 
 Sous chaque carte est indiquée son nom. Pour générer un planche, appeler l'URL *http://sweetohm.net/sawo/cards/CLEF/* suivie des noms des cartes séparées de slashs.
 
@@ -34,7 +34,7 @@ Par exemple, pour générer une fiche de personnage et de PNJ accompagnées de l
 
 Ce qui donnera la planche suivante :
 
-![](planche-2x2.png)
+![](img/sawo-cards-planche-2x2.png)
 
 Il est possible de générer des planches *2 x 1*, *2 x 2* et *4 x 2*. On enverra alors sur l'URL *2*, *4* ou *8* noms de cartes. Pour récupérer la planches, faire un clic droit sur l'image et sélectionner dans le menu *Enregistrer l'image sous...*.
 
@@ -44,7 +44,7 @@ Pour faire une planche *4x2* avec les principales cartes, on appellera :
 
 Ce qui donne la planche :
 
-![](planche-4x2.png)
+![](img/sawo-cards-planche-4x2.png)
 
 En pratique, les cartes les plus utilisées sont *intrigue*, *PNJ*, *Extras*, *Joker*, *lieu* et *tresor*. On prendra soin de les imprimer dans les bonnes proportions sur du bristol pour préparer ses parties.
 
@@ -58,11 +58,11 @@ J'imprime les feuilles des personnages en format *A5* (avec leur background) pou
 
 Un court scénario tient sur une dizaine de cartes :
 
-![](scenario.png)
+![](img/sawo-cards-scenario.png)
 
 Pour une campagne, telle que *Irongate* dans le cas de la photo, c'est bien plus conséquent et on arrive vite à des piles de cartes.
 
-![](campagne.png)
+![](img/sawo-cards-campagne.png)
 
 Si vous avez des suggestions pour améliorer ces cartes ou en créer de nouvelles, n'hésitez pas à m'envoyer un email à <mailto:michel.casabianca@gmail.com>.
 
