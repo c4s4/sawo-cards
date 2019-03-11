@@ -1,5 +1,9 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.0.6
+  date:    2019-03-11
+  summary: Mise à jour des images avec nouveau logo
+
 - version: 1.0.5
   date:    2019-03-10
   summary: Mise à jour logo fan made
