@@ -1,6 +1,6 @@
 # NeON Build File (http://github.com/c4s4/neon)
 
-default: go
+default: [release, deploy, publish]
 extends: [golang, changelog]
 
 properties:
