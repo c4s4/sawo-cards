@@ -1,5 +1,9 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.0.10
+  date:    2019-03-13
+  summary: Correction du titre
+
 - version: 1.0.9
   date:    2019-03-12
   summary: Ajout du titre
