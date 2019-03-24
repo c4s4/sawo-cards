@@ -120,7 +120,7 @@ func Planche(ctx *gin.Context) {
 	}
 	sort.Strings(images)
 	command := "montage"
-	arguments := []string{"-mode", "concatenate", "-label", "%t", "-pointsize", "48", "-tile", "5x3"}
+	arguments := []string{"-mode", "concatenate", "-label", "%t", "-pointsize", "48", "-tile", "5x4"}
 	for _, image := range images {
 		arguments = append(arguments, image)
 	}
