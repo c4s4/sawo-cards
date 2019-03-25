@@ -1,5 +1,9 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.1.2
+  date:    2019-03-25
+  summary: Correction de la regexp du nom des images
+
 - version: 1.1.1
   date:    2019-03-24
   summary: Correction de la planche
