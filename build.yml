@@ -44,6 +44,7 @@ targets:
     - print: 'Copying images...'
     - $: 'scp cards/*.png sawo@elrond:~/'
     - print: 'Starting service...'
+    - $: ['ssh', 'root@elrond', 'rm /tmp/planche-*.png']
     - $: ['ssh', 'root@elrond', 'systemctl start sawo-cards']
 
   archive:
