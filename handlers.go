@@ -12,7 +12,7 @@ import (
 )
 
 // RegexpImage is the regexp for image names
-var RegexpImage = regexp.MustCompile(`^\w+$`)
+var RegexpImage = regexp.MustCompile(`^[\w-]+$`)
 
 // BuildImage run command to build the image
 func BuildImage(images []string, ctx *gin.Context) {
