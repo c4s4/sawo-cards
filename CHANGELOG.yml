@@ -1,5 +1,11 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.2.1
+  date:    2019-04-12
+  summary: Correction progression édition adventure
+  fixed:
+  - "Correction de la piste de progression pour l'édition aventure"
+
 - version: 1.2.0
   date:    2019-04-10
   summary: Nouvelles cartes
