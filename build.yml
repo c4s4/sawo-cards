@@ -5,6 +5,7 @@ extends: [golang, changelog]
 
 properties:
   NAME:    'sawo-cards'
+  PACKAGE: '.'
   LIBRARIES:
   - 'github.com/gin-gonic/gin'
 
