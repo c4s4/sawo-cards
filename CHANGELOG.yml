@@ -1,5 +1,9 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.2.5
+  date:    2019-09-01
+  summary: Nouvelle carte PNJ
+
 - version: 1.2.4
   date:    2019-06-27
   summary: Correction cartes iz2
