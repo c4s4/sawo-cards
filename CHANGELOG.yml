@@ -1,5 +1,9 @@
 # Semantic ChangeLog (see https://github.com/c4s4/changelog/)
 
+- version: 1.3.0
+  date:    2019-09-25
+  summary: Ajout de cartes de véhicules
+
 - version: 1.2.5
   date:    2019-09-01
   summary: Nouvelle carte PNJ
