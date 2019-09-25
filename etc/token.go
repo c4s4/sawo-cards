@@ -10,7 +10,7 @@ import (
 
 const (
 	CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-	SIZE = 24
+	SIZE       = 24
 )
 
 func init() {
