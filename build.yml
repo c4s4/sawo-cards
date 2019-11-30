@@ -1,7 +1,7 @@
 # NeON Build File (http://github.com/c4s4/neon)
 
 default: [release, deploy, publish]
-extends: [golang, changelog]
+extends: [golang, git-master]
 
 properties:
   NAME:    'sawo-cards'
